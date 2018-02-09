@@ -21,7 +21,7 @@ def weights_init(m):
         m.weight.data.normal_(1.0, 0.02)
         m.bias.data.fill_(0)
     elif classname.find('Linear') != -1:
-	m.weight.data.normal_(1.0,0.02)
+    	m.weight.data.normal_(1.0,0.02)
 
 if torch.cuda.is_available():
 	fixed_noise = Variable(torch.FloatTensor(batch_size, channel_size, 1, 1).normal_(mean=0, std=1).cuda())
@@ -41,7 +41,7 @@ Des.apply(weights_init)
 
 criterion = nn.BCELoss()
 
-data_transforms = transforms.Compose([transforms.Scale(300),
+data_transforms = transforms.Compose([transforms.Resize(300),
 									transforms.CenterCrop((256,256)),
 									transforms.ToTensor(),
 									transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
@@ -145,7 +145,7 @@ for epoch in range(1,500):
 				loss.backward()
 				Gen_opt.step()
 
-		print '[Epoch [{0}]/[500]],[iteration [{1}]/[{7}]], loss_Des = {2}, loss_Gen = {3}, pred_x = {4}, pred_G(x) = {5}, pred_G = {6}'.format(epoch,i,loss_D.data[0], loss_G.data[0], pred_x, pred_Gx, pred_Gx_2,len(dataloader))
+		print ('[Epoch [{0}]/[500]],[iteration [{1}]/[{7}]], loss_Des = {2}, loss_Gen = {3}, pred_x = {4}, pred_G(x) = {5}, pred_G = {6}'.format(epoch,i,loss_D.data[0], loss_G.data[0], pred_x, pred_Gx, pred_Gx_2,len(dataloader)))
 		results.append((epoch,i,loss_D.data[0],loss_G.data[0],pred_x,pred_Gx))
 		np.save('results.npy',results)
 		if i % 10 == 0:
