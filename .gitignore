@@ -1,3 +1,9 @@
+# model files
+**/*.pth
+
+#results
+**/*.npy
+
 #Data Images
 **/*.png
 **/*.jpg
