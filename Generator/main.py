@@ -41,7 +41,7 @@ Des.apply(weights_init)
 
 criterion = nn.BCELoss()
 
-data_transforms = transforms.Compose([transforms.Resize(300),
+data_transforms = transforms.Compose([transforms.Scale(300),
 									transforms.CenterCrop((256,256)),
 									transforms.ToTensor(),
 									transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
