@@ -1,6 +1,6 @@
 # Beating-Melanoma
 
-******************************************************************* . 
+******************************************************************* </br>
 #Bonus:    
   It is often difficult to download huge amount of data as zip files from website. Thus, we have an ISIC API to download  segmentation masks from the ISIC website for images present in your folder.  
   Usage:  
