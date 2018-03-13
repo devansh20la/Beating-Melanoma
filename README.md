@@ -76,7 +76,7 @@ iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
 
 The weights for the Classification model are available on: https://drive.google.com/file/d/12XZrDWHODCpfCB6Vh9TQdFKHP51ORcKp/view?usp=sharing
 
-###Training
+### Training
 
 ```
 usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
@@ -86,7 +86,7 @@ usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint 
 
 ```
 
-###Testing
+### Testing
 
 ```
 usage Test.py
