@@ -101,7 +101,6 @@ optimizer = optim.SGD(model_ft.parameters(), lr=args.lr, momentum=0.9, weight_de
 
 if args.checkpoint:
     state = torch.load(args.checkpoint)
-    shutil.copyfile(args.checkpoint,'prev_' + args.checkpoint)
     model_ft.load_state_dict(state['model'])
     optimizer.load_state_dict(state['optimizer'])
     start_epoch = state['epoch']

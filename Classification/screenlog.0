@@ -48,3 +48,313 @@ Epoch = 43, TrainingLoss = 0.08249648879632183, Train_corrects = 24.245098039215
 Epoch = 44, TrainingLoss = 0.0930401261369363, Train_corrects = 24.094771241830067,val Loss = 0.9450737039248148, val_corrects19.833333333333332
 Epoch = 45, TrainingLoss = 0.0820713654454201, Train_corrects = 24.225490196078432,val Loss = 0.7391644865274429, val_corrects19.666666666666668
 Epoch = 46, TrainingLoss = 0.07927666825023205, Train_corrects = 24.245098039215687,val Loss = 0.7410196711619695, val_corrects19.833333333333332
+Epoch = 47, TrainingLoss = 0.06575132839326911, Train_corrects = 24.392156862745097,val Loss = 0.8511663327614466, val_corrects19.333333333333332
+^X^CProcess Process-970:
+Process Process-961:
+Process Process-966:
+Process Process-969:
+Process Process-964:
+Process Process-965:
+Process Process-962:
+Process Process-963:
+Process Process-968:
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+KeyboardInterrupt
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 335, in get
+    res = self._reader.recv_bytes()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 34, in _worker_loop
+    r = index_queue.get()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/queues.py", line 334, in get
+    with self._rlock:
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/synchronize.py", line 96, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Process Process-967:
+Traceback (most recent call last):
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 258, in _bootstrap
+    self.run()
+  File "/home/devansh/anaconda3/lib/python3.6/multiprocessing/process.py", line 93, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 40, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 40, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/home/devansh/Documents/Beating-Melanoma/Classification/data_loader.py", line 28, in __getitem__
+    image = transfor(image)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/torchvision/transforms.py", line 140, in __call__
+    return img.resize((ow, oh), self.interpolation)
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/PIL/Image.py", line 1745, in resize
+    self.load()
+  File "/home/devansh/anaconda3/lib/python3.6/site-packages/PIL/ImageFile.py", line 236, in load
+    n, err_code = decoder.decode(b)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "Train.py", line 134, in <module>
+    loss,correct,_ = model_run('train',model_ft, trinput, trlabels, criterion, optimizer)
+  File "Train.py", line 46, in model_run
+    corrects = torch.sum(preds==labels.data)
+KeyboardInterrupt
+[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ vim Test.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;32r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[32;1H"Test.py" 55L, 1809C[1;1H[35mimport[0m torch
+[35mimport[0m torch.nn [38;5;130mas[0m nn
+[35mimport[0m torch.optim [38;5;130mas[0m optim
+[35mfrom[0m torch.autograd [35mimport[0m Variable
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mfrom[0m torchvision [35mimport[0m datasets,models,transforms
+[35mimport[0m os
+[35mimport[0m copy
+[35mfrom[0m data_loader [35mimport[0m imageandlabel
+[35mimport[0m argparse
+
+[38;5;130mdef[0m [36mmodel_run[0m(model,inputs,labels,criterion):[14;5Hmodel.eval()
+    model.train([36mFalse[0m)[17;5Hinputs, labels, = Variable(inputs.cuda(), volatile = [36mTrue[0m), Variable(labels.cuda(), volatile= [36mTrue[0m)
+    outputs = model(inputs)[20;5Hloss = criterion(outputs, labels)
+    _, preds = torch.max(outputs.data, [31m1[0m)
+    corrects = torch.sum(preds==labels.data)[24;5H[38;5;130mreturn[0m loss.data[[31m0[0m],corrects,outputs
+
+parser = argparse.ArgumentParser(description=[31m'PyTorch Skin Lesion Testing'[0m)
+parser.add_argument([31m'--rd'[0m,[31m'--root_dir'[0m,default=[31m'/home/devansh/Documents/Melanoma/Classification/data/test/'[0m)
+parser.add_argument([31m'--cp'[0m,[31m'--checkpoint'[0m,default=[31m'model_best.pth.tar'[0m)
+args = parser.parse_args()
+
+data_transforms = transforms.Compose([[32;150H1,1[11CTop[1;1H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[32;3H[K[32;3H[?12l[?25h[?25l[32;2H[K[32;2H[?12l[?25h [?25l[148C1,1[11CTop[1;1H[?12l[?25h[?25l[32;150H2[2;1H[?12l[?25h[?25l[32;150H3[3;1H[?12l[?25h[?25l[32;150H4[4;1H[?12l[?25h[?25l[32;150H5[5;1H[?12l[?25h[?25l[32;150H6[6;1H[?12l[?25h[?25l[32;150H7[7;1H[?12l[?25h[?25l[32;150H8[8;1H[?12l[?25h[?25l[32;150H9[9;1H[?12l[?25h[?25l[32;150H10,1[10;1H[?12l[?25h[?25l[32;151H1,0-1[11;1H[?12l[?25h[?25l[32;151H2,1  [12;1H[?12l[?25h[?25l[32;151H3[13;1H[?12l[?25h[?25l[32;151H4[14;1H[?12l[?25h[?25l[32;151H5[15;1H[?12l[?25h[?25l[32;151H6,0-1[16;1H[?12l[?25h[?25l[32;151H7,1  [17;1H[?12l[?25h[?25l[32;151H8[18;1H[?12l[?25h[?25l[32;151H9,0-1[19;1H[?12l[?25h[?25l[32;150H20,1  [20;1H[?12l[?25h[?25l[32;151H1[21;1H[?12l[?25h[?25l[32;151H2[22;1H[?12l[?25h[?25l[32;151H3[23;1H[?12l[?25h[?25l[32;151H4[24;1H[?12l[?25h[?25l[32;151H5,0-1[25;1H[?12l[?25h[?25l[32;151H6,1  [26;1H[?12l[?25h[?25l[32;151H7[27;1H[?12l[?25h[?25l[32;151H8[28;1H[?12l[?25h[?25l[32;151H9[29;1H[?12l[?25h[?25l[32;150H30,0-1[30;1H[?12l[?25h[?25l[32;151H1,1  [31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.Scale([31m400[0m),[32;150H[K[32;150H32,1[11C4%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.CenterCrop([31m224[0m),[32;150H[K[32;150H33,1[11C8%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.ToTensor(),[32;150H[K[32;150H34,1[10C12%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.Normalize([[31m0.485[0m, [31m0.456[0m, [31m0.406[0m], [[31m0.229[0m, [31m0.224[0m, [31m0.225[0m])])[32;150H[K[32;150H35,1[10C16%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H36,0-1[8C20%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hdsets = imageandlabel(args.rd,[31m'img_test.csv'[0m, data_transforms)[32;150H[K[32;150H37,1[10C25%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hdset_loaders = torch.utils.data.DataLoader(dsets, batch_size=[31m25[0m, shuffle=[36mTrue[0m, num_workers=[31m10[0m)[32;150H[K[32;150H38,1[10C29%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H39,0-1[8C33%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hcriterion = nn.CrossEntropyLoss()[32;150H[K[32;150H40,1[10C37%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1H[34m#criterion = nn.BCEWithLogitsLoss()[0m[32;150H[K[32;150H41,1[10C41%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hi=[31m0[0m[32;150H[K[32;150H42,1[10C45%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hsubmission = {}[32;150H[K[32;150H43,1[10C50%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hmodel_ft = models.resnet50()[32;150H[K[32;150H44,1[10C54%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hmodel_ft.fc = nn.Linear([31m2048[0m,[31m3[0m)[32;150H[K[32;150H45,1[10C58%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hmodel_ft.load_state_dict(torch.load(args.cp)[[31m'model'[0m])[32;150H[K[32;150H46,1[10C62%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hmodel_ft.cuda()[32;150H[K[32;150H47,1[10C66%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H48,0-1[8C70%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1H[38;5;130mfor[0m data [38;5;130min[0m dset_loaders:[32;150H[K[32;150H49,1[10C75%[31;1H[?12l[?25h[?25l[32;150H[K[32;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"Test.py" 55L, 1809C written
+[?1l>[?12l[?25h[?1049l[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ vim data_loader.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;32r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[32;1H"data_loader.py" 42L, 1157C[1;1H[35mimport[0m os
+[35mimport[0m pandas [38;5;130mas[0m pd
+[35mfrom[0m torch.utils.data [35mimport[0m Dataset
+[35mfrom[0m PIL [35mimport[0m Image
+[35mimport[0m random
+[35mfrom[0m torchvision [35mimport[0m transforms
+
+transfor = transforms.Scale([31m400[0m)
+
+[38;5;130mclass[0m [36mimageandlabel[0m(Dataset):[12;5H[38;5;130mdef[0m [36m__init__[0m (self,root_dir,csv_file,trans=[36mNone[0m):[13;9Hself.csvfile = pd.read_csv(csv_file)[14;9Hself.csvfile.sort_values([31m'label'[0m,axis=[31m0[0m,ascending=[36mTrue[0m,kind=[31m'quicksort'[0m,inplace=[36mTrue[0m)[15;9Hself.csvfile.reset_index(inplace=[36mTrue[0m,drop = [36mTrue[0m)[16;9Hself.trans = trans[17;9Hself.root_dir = root_dir[19;5H[38;5;130mdef[0m [36m__len__[0m(self):[20;9H[38;5;130mreturn[0m [36mlen[0m(self.csvfile)[22;5H[38;5;130mdef[0m [36m__getitem__[0m(self,idx):[23;9Himgname = os.path.join(self.root_dir,self.csvfile.iloc[idx,[31m0[0m])[24;9Himage = Image.open(imgname + [31m'.jpg'[0m)[25;9Hlabel = self.csvfile.ix[idx,[31m1[0m][27;9H[38;5;130mif[0m image.size[[31m0[0m] != [31m256[0m:[28;13Himage = transfor(image)[30;9H[38;5;130mif[0m self.trans:[31;13Himage = self.trans(image)[32;150H1,1[11CTop[1;1H[?12l[?25h[?25l[32;1H[K[32;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"data_loader.py" 42L, 1157C written
+[?1l>[?12l[?25h[?1049l[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ clear
+[H[2J[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ vim Train.py 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;32r[?12;25h[?12l[?25h[27m[24m[0m[H[2J[?25l[32;1H"Train.py" 170L, 5432C[1;1H[35mimport[0m torch
+[35mimport[0m torch.nn [38;5;130mas[0m nn
+[35mimport[0m torch.optim [38;5;130mas[0m optim
+[35mfrom[0m torch.autograd [35mimport[0m Variable
+[35mimport[0m numpy [38;5;130mas[0m np
+[35mfrom[0m torchvision [35mimport[0m datasets,models,transforms
+[35mimport[0m os
+[35mimport[0m copy
+[35mfrom[0m data_loader [35mimport[0m imageandlabel, RandomVerticleFlip
+[35mimport[0m pandas [38;5;130mas[0m pd
+[35mimport[0m random
+[35mimport[0m shutil
+[35mimport[0m argparse
+[35mimport[0m pickle
+[35mimport[0m numpy [38;5;130mas[0m np
+
+[38;5;130mdef[0m [36msave_checkpoint[0m(state, is_best, filename):[19;5Htorch.save(state, filename)
+    [38;5;130mif[0m is_best:[21;9Hshutil.copyfile(filename, [31m'model_best.pth.tar'[0m)[22;9H[36mprint[0m([31m"New Best Model Found"[0m)
+
+[38;5;130mdef[0m [36mmodel_run[0m(phase,model,inputs,labels,criterion,optimizer):[26;5H[38;5;130mif[0m phase == [31m'train'[0m:[27;9Hmodel.train()
+    [38;5;130melse[0m:[29;9Hmodel.eval()[31;5H[38;5;130mif[0m phase == [31m'train'[0m:[32;150H1,1[11CTop[1;1H[?12l[?25h[?25l[32;150H2[2;1H[?12l[?25h[?25l[32;150H3[3;1H[?12l[?25h[?25l[32;150H4[4;1H[?12l[?25h[?25l[32;150H5[5;1H[?12l[?25h[?25l[32;150H6[6;1H[?12l[?25h[?25l[32;150H7[7;1H[?12l[?25h[?25l[32;150H8[8;1H[?12l[?25h[?25l[32;150H9[9;1H[?12l[?25h[?25l[32;150H10,1[10;1H[?12l[?25h[?25l[32;151H1[11;1H[?12l[?25h[?25l[32;151H2[12;1H[?12l[?25h[?25l[32;151H3[13;1H[?12l[?25h[?25l[32;151H4[14;1H[?12l[?25h[?25l[32;151H5[15;1H[?12l[?25h[?25l[32;151H6,0-1[16;1H[?12l[?25h[?25l[32;151H7,1  [17;1H[?12l[?25h[?25l[32;151H8,0-1[18;1H[?12l[?25h[?25l[32;151H9,1  [19;1H[?12l[?25h[?25l[32;150H20[20;1H[?12l[?25h[?25l[32;151H1[21;1H[?12l[?25h[?25l[32;151H2[22;1H[?12l[?25h[?25l[32;151H3,0-1[23;1H[?12l[?25h[?25l[32;151H4,1  [24;1H[?12l[?25h[?25l[32;151H5[25;1H[?12l[?25h[?25l[32;151H6[26;1H[?12l[?25h[?25l[32;151H7[27;1H[?12l[?25h[?25l[32;151H8[28;1H[?12l[?25h[?25l[32;151H9[29;1H[?12l[?25h[?25l[32;150H30,0-1[30;1H[?12l[?25h[?25l[32;151H1,1  [31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Hinputs, labels = Variable(inputs.cuda()), Variable(labels.cuda())[32;1H[K[32;150H32,1[11C0%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H[38;5;130melse[0m:[32;150H[K[32;150H33,1[11C1%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Hinputs, labels = Variable(inputs.cuda(), volatile = [36mTrue[0m), Variable(labels.cuda(), volatile= [36mTrue[0m)[32;150H[K[32;150H34,1[11C2%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H35,0-1[9C2%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5Hoptimizer.zero_grad()[32;150H[K[32;150H36,1[11C3%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5Houtputs = model(inputs)[32;150H[K[32;150H37,1[11C4%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H38,0-1[9C5%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5Hloss = criterion(outputs, labels)[32;150H[K[32;150H39,1[11C5%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H_, preds = torch.max(outputs.data, [31m1[0m)[32;150H[K[32;150H40,1[11C6%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H41,1[11C7%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H[38;5;130mif[0m phase==[31m'train'[0m:[32;150H[K[32;150H42,1[11C7%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Hloss.backward()[32;150H[K[32;150H43,1[11C8%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Hoptimizer.step()[32;150H[K[32;150H44,1[11C9%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H45,0-1[8C10%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5Hcorrects = torch.sum(preds==labels.data)[32;150H[K[32;150H46,1[10C10%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H47,1[10C11%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H[38;5;130mreturn[0m loss.data[[31m0[0m],corrects,outputs[32;150H[K[32;150H48,1[10C12%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H49,0-1[8C12%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1HmanualSeed = [31m200[0m[32;150H[K[32;150H50,1[10C13%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hrandom.seed(manualSeed)[32;150H[K[32;150H51,1[10C14%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Htorch.manual_seed(manualSeed)[32;150H[K[32;150H52,1[10C15%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hnp.random.seed([31m200[0m)[32;150H[K[32;150H53,1[10C15%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H54,0-1[8C16%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1H[38;5;130mif[0m torch.cuda.is_available():[32;150H[K[32;150H55,1[10C17%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;4Htorch.cuda.manual_seed_all(manualSeed)[32;150H[K[32;150H56,1[10C17%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H57,0-1[8C18%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser = argparse.ArgumentParser(description=[31m'PyTorch Skin Lesion Training'[0m)[32;150H[K[32;150H58,1[10C19%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser.add_argument([31m'--lr'[0m,[31m'--learning_rate'[0m,[36mtype[0m=[36mfloat[0m,default=[31m0.001[0m,[36mhelp[0m=[31m'initial learning rate'[0m)[32;150H[K[32;150H59,1[10C20%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser.add_argument([31m'--lr_de'[0m,[31m'--lr_decay'[0m,[36mtype[0m=[36mint[0m,default=[31m30[0m,[36mhelp[0m=[31m'learning rate decay epoch'[0m)[32;150H[K[32;150H60,1[10C20%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser.add_argument([31m'--checkpoint'[0m,[36mtype[0m=[36mstr[0m,default=[31m''[0m)[32;150H[K[32;150H61,1[10C21%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser.add_argument([31m'--wd'[0m,[31m'--weightdecay'[0m,[36mtype[0m=[36mfloat[0m,default=[31m0[0m)[32;150H[K[32;150H62,1[10C22%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hparser.add_argument([31m'--rd'[0m,[31m'--root_dir'[0m,default=[31m'/home/devansh/Documents/Melanoma/Classification/data'[0m)[32;150H[K[32;150H63,1[10C23%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H64,0-1[8C23%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hargs = parser.parse_args()[32;150H[K[32;150H65,1[10C24%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H66,0-1[8C25%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1H[36mprint[0m([31m"learning_rate: {0}, decay:{1}, checkpoint:{2}"[0m.format(args.lr,args.lr_de,args.checkpoint))[32;150H[K[32;150H67,1[10C25%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H68,0-1[8C26%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hdata_transforms = {[32;150H[K[32;150H69,1[10C27%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H[31m'train'[0m: transforms.Compose([[32;150H[K[32;150H70,1[10C28%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9HRandomVerticleFlip(),[32;150H[K[32;150H71,1[10C28%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.RandomCrop([31m224[0m),[32;150H[K[32;150H72,1[10C29%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.ToTensor(),[32;150H[K[32;150H73,1[10C30%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.Normalize([[31m0.485[0m, [31m0.456[0m, [31m0.406[0m], [[31m0.229[0m, [31m0.224[0m, [31m0.225[0m])[32;150H[K[32;150H74,1[10C30%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H]),[32;150H[K[32;150H75,1[10C31%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H[31m'val'[0m: transforms.Compose([[32;150H[K[32;150H76,1[10C32%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.CenterCrop([31m224[0m),[32;150H[K[32;150H77,1[10C33%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.ToTensor(),[32;150H[K[32;150H78,1[10C33%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;9Htransforms.Normalize([[31m0.485[0m, [31m0.456[0m, [31m0.406[0m], [[31m0.229[0m, [31m0.224[0m, [31m0.225[0m])[32;150H[K[32;150H79,1[10C34%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;5H])}[32;150H[K[32;150H80,1[10C35%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1H[36mprint[0m ([31m"....Initializing data sampler....."[0m)[32;150H[K[32;150H81,1[10C35%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H82,0-1[8C36%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hdata_dir = args.rd[32;150H[K[32;150H83,1[10C37%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;1Hdsets = {x: imageandlabel(os.path.join(data_dir, x),[31m'img_'[0m+ x +[31m'.csv'[0m, data_transforms[x])[32;150H[K[32;150H84,1[10C38%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[31;10H[38;5;130mfor[0m x [38;5;130min[0m [[31m'train'[0m, [31m'val'[0m]}[32;150H[K[32;150H85,1[10C38%[31;1H[?12l[?25h[?25l[1;31r[31;1H
+[1;32r[32;150H[K[32;150H86,0-1[8C39%[31;1H[?12l[?25h[?25l[32;150H[K[32;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"Train.py" 170L, 5432C written
+[?1l>[?12l[?25h[?1049l[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ clear
+[H[2J[01;32mdevansh@anna-devbox07[00m:[01;34m~/Documents/Beating-Melanoma/Classification[00m$ clearvim Train.py [8Pclearvim data_loader.py [7PTest[C[C[C[CCUDA_VISIBLE_DEVICES=2 python Train.pyexit[KCUDA_VISIBLE_DEVICES=2 python Train.py[C[C[C --cp [K[Kheckpoint model_bestp[K.pth.tar --lr =[K[K=-[K0.0001
+learning_rate: 0.0001, decay:30, checkpoint:model_best.pth.tar
+....Initializing data sampler.....
+....Loading Model.....
+checkpoint Loaded star_epoch = 4,best_loss= 0.5754776298999786
+Epoch = 5, TrainingLoss = 0.3129083347914655, Train_corrects = 21.647058823529413,val Loss = 0.7349703659613928, val_corrects17.166666666666668
+Epoch = 6, TrainingLoss = 0.3057183280002837, Train_corrects = 21.833333333333332,val Loss = 0.7278230637311935, val_corrects16.5
+Epoch = 7, TrainingLoss = 0.29552488870237, Train_corrects = 21.784313725490197,val Loss = 0.7513155738512675, val_corrects17.5
+Epoch = 8, TrainingLoss = 0.27980293248311366, Train_corrects = 22.091503267973856,val Loss = 0.7118946313858032, val_corrects18.166666666666668
+Epoch = 9, TrainingLoss = 0.2709369880749899, Train_corrects = 22.23856209150327,val Loss = 0.6020407974720001, val_corrects19.166666666666668
+Epoch = 10, TrainingLoss = 0.2510439672209079, Train_corrects = 22.369281045751634,val Loss = 0.6498305946588516, val_corrects18.166666666666668
+Epoch = 11, TrainingLoss = 0.2231328966692577, Train_corrects = 22.774509803921568,val Loss = 0.703953375418981, val_corrects18.0
+Epoch = 12, TrainingLoss = 0.2255985222002065, Train_corrects = 22.62091503267974,val Loss = 0.7688939223686854, val_corrects18.666666666666668
+Epoch = 13, TrainingLoss = 0.22526375007103472, Train_corrects = 22.754901960784313,val Loss = 0.6602986057599386, val_corrects19.166666666666668
+Epoch = 14, TrainingLoss = 0.20891904429185623, Train_corrects = 22.856209150326798,val Loss = 0.692054440577825, val_corrects19.333333333333332
+Epoch = 15, TrainingLoss = 0.18946506299407168, Train_corrects = 23.107843137254903,val Loss = 0.904599795738856, val_corrects18.0
+Epoch = 16, TrainingLoss = 0.1826403759164261, Train_corrects = 23.15359477124183,val Loss = 0.6224550604820251, val_corrects19.0
+Epoch = 17, TrainingLoss = 0.17551879122171526, Train_corrects = 23.23856209150327,val Loss = 0.9407213429609934, val_corrects17.666666666666668
+Epoch = 18, TrainingLoss = 0.17465333086042817, Train_corrects = 23.23856209150327,val Loss = 0.6853202233711878, val_corrects19.333333333333332
+Epoch = 19, TrainingLoss = 0.17555274203529253, Train_corrects = 23.23856209150327,val Loss = 0.6033427615960439, val_corrects19.833333333333332
+Epoch = 20, TrainingLoss = 0.1595895393215899, Train_corrects = 23.415032679738562,val Loss = 0.8291420837243398, val_corrects17.833333333333332
+Epoch = 21, TrainingLoss = 0.14318587323589846, Train_corrects = 23.624183006535947,val Loss = 0.6710518896579742, val_corrects19.333333333333332
+Epoch = 22, TrainingLoss = 0.1518213330475869, Train_corrects = 23.53921568627451,val Loss = 0.5989235639572144, val_corrects20.5
+Epoch = 23, TrainingLoss = 0.15573103842325509, Train_corrects = 23.49673202614379,val Loss = 0.7195120453834534, val_corrects19.833333333333332
+Epoch = 24, TrainingLoss = 0.13957072358907147, Train_corrects = 23.594771241830067,val Loss = 0.6425224443276724, val_corrects20.666666666666668
+Epoch = 25, TrainingLoss = 0.1320838176834038, Train_corrects = 23.81045751633987,val Loss = 0.6815563440322876, val_corrects20.333333333333332
+Epoch = 26, TrainingLoss = 0.1278177136311831, Train_corrects = 23.73856209150327,val Loss = 0.6418327689170837, val_corrects20.0
+Epoch = 27, TrainingLoss = 0.11800190426250981, Train_corrects = 23.833333333333332,val Loss = 0.77101731300354, val_corrects19.166666666666668
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[BNew Best Model Found
+Epoch = 28, TrainingLoss = 0.11827196086927323, Train_corrects = 23.76797385620915,val Loss = 0.5476323316494623, val_corrects20.5
+Epoch = 29, TrainingLoss = 0.11611569855130868, Train_corrects = 23.869281045751634,val Loss = 0.7704247335592905, val_corrects19.166666666666668
