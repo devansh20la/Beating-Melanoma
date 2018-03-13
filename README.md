@@ -44,7 +44,7 @@ usage mse_check.py: find closest match between fake images and real images.
 
 ## Lesion segmentation (Modified Unet)
 
-Model weights can be downloaded from:
+Model weights can be downloaded from: https://drive.google.com/file/d/12c5W8EOzfPsiLVBoR6m7znbDPJEVLrA1/view?usp=sharing
 
 ### Training
 
