@@ -27,4 +27,6 @@ ISIC API downloads segmentation masks from the ISIC website for images present i
   
   ------------------------ Classification -------------------------- </br>
   
+  The weights for the Classification model are available on: https://drive.google.com/file/d/12XZrDWHODCpfCB6Vh9TQdFKHP51ORcKp/view?usp=sharing
+  
   
