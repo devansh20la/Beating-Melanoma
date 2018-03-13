@@ -58,14 +58,14 @@ if torch.cuda.is_available():
 parser = argparse.ArgumentParser(description='PyTorch Skin Lesion Training')
 parser.add_argument('--lr','--learning_rate',type=float,default=0.001,help='initial learning rate')
 parser.add_argument('--lr_de','--lr_decay',type=int,default=30,help='learning rate decay epoch')
-parser.add_argument('--checkpoint',type=str,default='')
+parser.add_argument('--cp','--checkpoint',type=str,default='')
 parser.add_argument('--wd','--weightdecay',type=float,default=0)
 parser.add_argument('--rd','--root_dir',default='/home/devansh/Documents/Melanoma/Classification/data')
 parser.add_argument('--bs','--batch_size',type=int,default=50)
 
 args = parser.parse_args()
 
-print("learning_rate: {0}, decay:{1}, checkpoint:{2}".format(args.lr,args.lr_de,args.checkpoint))
+print("learning_rate: {0}, decay:{1}, checkpoint:{2}".format(args.lr,args.lr_de,args.cp))
 
 data_transforms = {
     'train': transforms.Compose([
@@ -100,8 +100,8 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model_ft.parameters(), lr=args.lr, momentum=0.9, weight_decay=args.wd)
 # optimizer = optim.Adam(model_ft.parameters(),lr=args.lr,betas=(0.9, 0.999), eps=1e-08, weight_decay=args.wd)
 
-if args.checkpoint:
-    state = torch.load(args.checkpoint)
+if args.cp:
+    state = torch.load(args.cp)
     model_ft.load_state_dict(state['model'])
     optimizer.load_state_dict(state['optimizer'])
     start_epoch = state['epoch']
