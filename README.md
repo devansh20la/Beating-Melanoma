@@ -113,7 +113,7 @@ usage Test.py
 
 ```
 ## Bonus
-API to download segmentation masks for images from ISIC-Archive is available in BONUS
+API to download segmentation masks of images obtained from ISIC-Archive is available in the folder Bonus.
 
 ## Acknowledgments
 
