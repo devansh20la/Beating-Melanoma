@@ -82,7 +82,7 @@ The weights for the Classification model are available on: https://drive.google.
 usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
 
 1) Checkpoints are saved at every epoch as checkpoint_ep%d.pth.tar %(epoch)
-2) A list of all previous validation and training loss and accuarcy values are saved at every epoch as train_loss%d.pkl %(epoch) | val_loss%d.pkl %(epoch) and train_corrects%d.pkl %(epoch) | val_corrects%d.pkl %(epoch).
+2) A list of loss and accuaracy values are saved as train_loss.pkl | val_loss.pkl and train_corrects.pkl | val_corrects.pkl
 
 ```
 

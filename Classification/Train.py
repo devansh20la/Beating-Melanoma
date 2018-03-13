@@ -15,14 +15,13 @@ from model import network
 import pickle
 import numpy as np
 
-
 def save_checkpoint(state, is_best, filename,savetrainloss,savetraincorrects,savevalloss,savevalcorrects):
     torch.save(state, filename)
 
-    savetrainloss_name = open('trainloss' + str(epoch) + '.pkl','wb')
-    savetraincorrects_name = open('traincorrects' + str(epoch) + '.pkl','wb')
-    savevalloss_name = open('valloss' + str(epoch) + '.pkl','wb')
-    savevalcorrects_name = open('valcorrects' + str(epoch) + '.pkl','wb')
+    savetrainloss_name = open('trainloss.pkl','wb')
+    savetraincorrects_name = open('traincorrects.pkl','wb')
+    savevalloss_name = open('valloss.pkl','wb')
+    savevalcorrects_name = open('valcorrects.pkl','wb')
 
     pickle.dump(savetrainloss,savetrainloss_name)
     pickle.dump(savetraincorrects,savetraincorrects_name)
