@@ -85,8 +85,8 @@ data_dir = args.rd
 dsets = {x: imageandlabel(os.path.join(data_dir, x),'img_'+ x +'.csv', data_transforms[x])
          for x in ['train', 'val']}
 
-dset_loaders = {x: torch.utils.data.DataLoader(dsets[x], batch_size=args.bs, num_workers=10, shuffle=True) 
-                for x in ['train', 'val']}
+dset_loaders = {'train': torch.utils.data.DataLoader(dsets['train'], batch_size=args.bs, num_workers=10, shuffle=True),
+                'val': torch.utils.data.DataLoader(dsets['val'], batch_size=25, num_workers=5,shuffle=False)}
 
 print ("....Loading Model.....")
 model_ft = models.resnet50(pretrained=True)
@@ -167,4 +167,4 @@ for epoch in range(start_epoch,500):
     'optimizer': optimizer.state_dict(),
     'best_loss': best_loss,'train_loss':savetrainloss,'train_corrects':savetraincorrects,'val_loss':savevalloss,'val_corrects':savevalcorrects},is_best,'checkpoints/checkpoint_ep%d.pth.tar'%(epoch))
     
-    print ('Epoch = {0}, TrainingLoss = {1}, Train_corrects = {3},val Loss = {2}, val_corrects{4}'.format(epoch,trainloss,valloss,traincorrects/args.bs,valcorrects/args.bs))
+    print ('Epoch = {0}, TrainingLoss = {1}, Train_corrects = {3},val Loss = {2}, val_corrects{4}'.format(epoch,trainloss,valloss,traincorrects/args.bs,valcorrects/25))

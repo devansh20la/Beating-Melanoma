@@ -19,7 +19,7 @@ from data_loader import RandomVerticalFlip
 
 torch.backends.cudnn.benchmark=True
 
-def save_checkpoint(state, train_loss, val_loss, is_best, filename,epoch):
+def save_checkpoint(state, is_best, filename):
     torch.save(state, filename)
 
     if is_best:
