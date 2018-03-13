@@ -26,15 +26,6 @@ Say what the step will be
 ## Deep Convolutional Generative Adversarial Network (DCGAN)
 
 ###  Training:
-The data loader class (data_loader.py) take csv file as input. The CSV file is arranged as follows:
-```
-Image_ID, Label
-ISIC_0015284, 0
-ISIC_0015284, 0
-.
-.
-.
-```
 
 Fake images will be saved under images folder as fake_samples_ep%d_it%d.png  after every 10th batch of real data.  The model weights are saved as 'netG.pth' and 'netD.pth'.
 
@@ -85,7 +76,19 @@ iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
 
 The weights for the Classification model are available on: https://drive.google.com/file/d/12XZrDWHODCpfCB6Vh9TQdFKHP51ORcKp/view?usp=sharing
 
+The data loader class (data_loader.py) take csv file as input. The CSV file is arranged as follows:
+
+```
+Image_ID, Label
+ISIC_0015284, 0
+ISIC_0015284, 0
+.
+.
+.
+```
+
 ### Training
+
 
 ```
 usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
