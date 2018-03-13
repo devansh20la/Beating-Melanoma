@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```
 Pytorch 0.2.0
-(Do not use Pytorch 0.3 or higher, the codes haven't been updated to work with pytorch 0.3.)
+(Do not use Pytorch 0.3 or higher, the codes are not updated to work with pytorch 0.3 )
 ```
 
 ## Hair removal
