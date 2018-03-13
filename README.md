@@ -41,7 +41,7 @@ usage main.py: Paste all the available data inside Generator/Data/Melanoma
 usage mse_check.py: find closest match between fake images and real images.
 
 1) The images are saved under results folder. Real closest matched images are saved as image%d_m_%f.jpg%(idx, error).
-2) Generated images is saved as image%d_m.jpg %(idx).
+2) Generated images are saved as image%d_m.jpg %(idx).
 ```
 
 ## Lesion segmentation (Modified Unet)
