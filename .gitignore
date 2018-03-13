@@ -1,14 +1,15 @@
 # model files
 **/*.pth
+**/*.tar
 
 #results
 **/*.npy
+**/*.pkl
 
 #Data Images
 **/*.png
 **/*.jpg
 **/*.eps
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
