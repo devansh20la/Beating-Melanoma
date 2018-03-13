@@ -24,7 +24,7 @@ def model_run(model,inputs,labels,criterion):
     return loss.data[0],corrects,outputs
 
 parser = argparse.ArgumentParser(description='PyTorch Skin Lesion Testing')
-parser.add_argument('--rd','--root_dir',default='home/devansh/Documents/Melanoma/Classification/data/test/')
+parser.add_argument('--rd','--root_dir',default='/home/devansh/Documents/Melanoma/Classification/data/test/')
 parser.add_argument('--cp','--checkpoint',default='model_best.pth.tar')
 args = parser.parse_args()
 
