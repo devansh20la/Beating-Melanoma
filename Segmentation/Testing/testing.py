@@ -53,8 +53,7 @@ criterion = nn.BCEWithLogitsLoss()
 print("....Initializing the model......")
 model = network()
 model = model.cuda()
-model = nn.DataParallel(model)
-model.load_state_dict(torch.load('model_best.pth.tar')['model'])
+model.load_state_dict(torch.load('model_seg.pth'))
 model.eval()
 
 if torch.cuda.is_available():
