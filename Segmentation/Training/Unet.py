@@ -22,12 +22,6 @@ torch.backends.cudnn.benchmark=True
 def save_checkpoint(state, train_loss, val_loss, is_best, filename,epoch):
     torch.save(state, filename)
 
-    train_loss_name = open('train_loss' + str(epoch) + '.pkl','wb')
-    val_loss_name = open('val_loss' + str(epoch) + '.pkl','wb')
-
-    pickle.dump(train_loss,train_loss_name,pickle.HIGHEST_PROTOCOL)
-    pickle.dump(val_loss,val_loss_name,pickle.HIGHEST_PROTOCOL)
-
     if is_best:
         shutil.copyfile(filename, 'model_best.pth.tar')
         print("Best model found")
@@ -54,7 +48,6 @@ def jaccard(output_map,seg_map):
 	j_index = 0.0
 	for i in range(size):
 		j_index += metrics.jaccard_similarity_score(seg_map[i,:,:].astype(int),output_map[i,:,:].astype(int),normalize=True)
-	#print (j_index/size)
 
 	return j_index/size
 
@@ -130,17 +123,15 @@ optimizer = optim.Adam(model.parameters(),lr = args.lr,betas=(0.9, 0.999), eps=1
 
 if args.checkpoint:
     state = torch.load(args.checkpoint)
-    shutil.copyfile(args.checkpoint,'prev' + args.checkpoint)
     model.load_state_dict(state['model'])
     optimizer.load_state_dict(state['optimizer'])
     start_epoch = state['epoch']
     best_loss = state['best_loss']
+    save_train_loss = state['train_loss']
+    save_val_loss = state['val_loss']
+
     print("checkpoint Loaded epoch = {0},best_loss = {1}".format(start_epoch,best_loss))
     del state
-    train_loss_name = open('train_loss' + str(start_epoch) + '.pkl','rb')
-    val_loss_name = open('val_loss' + str(start_epoch) + '.pkl','rb')
-    save_train_loss = pickle.load(train_loss_name)
-    save_val_loss = pickle.load(val_loss_name)
     start_epoch+=1
 
 else:
@@ -159,7 +150,6 @@ for epoch in range(start_epoch,500):
 	j_train = 0.0
 
 	for idx,data in enumerate(data_loader['train'],1):
-		#print(idx)
 		input_img,input_img_hsv,input_L,seg_map = data['image'],data['image_hsv'],data['image_L'],data['segmentation']
 
 		input_img = Normalize(input_img,(0.5,0.5,0.5),(0.5,0.5,0.5))
@@ -183,23 +173,20 @@ for epoch in range(start_epoch,500):
 		
 		train_loss += loss.data[0]
 		j_train += jaccard(out_map,seg_map)
-		#print (j_train)
 
-		if idx%1 == 0:
+		if idx%50 == 0:
 			vutils.save_image(input_img.data[:,:3,:,:],'results/train_epoch%ditr%d_a.png'%(epoch,idx),normalize=True) 
 			vutils.save_image(out_map.data,'results/train_epoch%ditr%d_c.png'%(epoch,idx))
 			vutils.save_image(seg_map.data,'results/train_epoch%ditr%d_b.png'%(epoch,idx))
 
 	train_loss = train_loss/idx
 	j_train = j_train/idx
-	#print (j_train)
 
 	# Validating the model on the validation dataset, saving the average validation loss in val_loss
 	val_loss = 0.0
 	j_val = 0.0
 
 	for idx,data in enumerate(data_loader['val'],1):
-		#print(idx)
 		input_img,input_img_hsv,input_L,seg_map = data['image'],data['image_hsv'],data['image_L'],data['segmentation']
 		
 		input_img = Normalize(input_img,(0.5,0.5,0.5),(0.5,0.5,0.5))
@@ -222,7 +209,6 @@ for epoch in range(start_epoch,500):
 			out_map.data[i,0,:,:] = torch.from_numpy(ndimage.binary_fill_holes(out_map[i,0,:,:].data.numpy()).astype(int))
 		
 		j_val += jaccard(out_map,seg_map)
-		#print(j_val)
 		val_loss += loss.data[0]
 
 		if idx%50 == 0:
@@ -232,7 +218,6 @@ for epoch in range(start_epoch,500):
 
 	val_loss = val_loss/idx
 	j_val = j_val/idx
-	#print(j_val)
 
 	# Appending and saving the losses to an array for easy visualization while the model is still training.
 	save_train_loss[epoch] = train_loss
@@ -251,6 +236,6 @@ for epoch in range(start_epoch,500):
 	save_checkpoint({'epoch': epoch, 
 		'model':model.state_dict(),
 		'optimizer': optimizer.state_dict(),
-		'best_loss': best_loss},save_train_loss,save_val_loss,is_best,'checkpoint_ep%d.pth.tar'%(epoch),epoch)
+		'best_loss': best_loss,'train_loss':save_train_loss, 'val_loss':save_val_loss},is_best,'checkpoints/checkpoint_ep%d.pth.tar'%(epoch))
 
 
