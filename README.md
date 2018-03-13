@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ```
 Pytorch 0.2.0
+(Do not use Pytorch 0.3 or higher, the codes haven't been updated to work with pytorch 0.3.)
 ```
 
 ## Hair removal
@@ -20,7 +21,8 @@ Say what the step will be
 
 ```
 1) Specify root directory for input images in main.m
-2) Dermoscopic images can be super highresolution (7000x7000 or higher), resize images to get faster results. Resizing might require suitable adjustment to radius of structuring element and threshold value in my_function.
+2) Dermoscopic images can be super highresolution (7000x7000 or higher), resize images to get faster results.
+Resizing might require suitable adjustment to radius of structuring element and threshold value in my_function.
 ```
 
 ## Image Generation (DCGAN)
@@ -52,11 +54,12 @@ Model weights can be downloaded from: https://drive.google.com/file/d/12c5W8EOzf
 usage Unet.py: [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
 
 1) Checkpoints are saved at every epoch as checkpoint_ep%d.pth.tar %(epoch)
-2) Validation and Training losses are saved at every epoch as train_loss%d.pkl %(epoch) and val_loss%d.pkl %(epoch).
+2) Validation and Training losses are saved at every epoch as train_loss%d.pkl %(epoch)
+and val_loss%d.pkl %(epoch).
 3) Output images are save under results folder as:
-i)  INPUT_IMAGE: val_epoch%ditr%d_a.jpg %(epoch,iteration)
-ii) LABEL: val_epoch%ditr%d_b.jpg %(epoch,iteration)
-iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
+    i)  INPUT_IMAGE: val_epoch%ditr%d_a.jpg %(epoch,iteration)
+    ii) LABEL: val_epoch%ditr%d_b.jpg %(epoch,iteration)
+    iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
 ```
 
 ### Testing
@@ -67,9 +70,9 @@ usage testing.py
 1) Specify model weights in the python script testing.py.
 1) The value of average Jaccard Index is printed on the terminal.
 2) Output images are save under results folder as:
-i)  INPUT_IMAGE: val_epoch%ditr%d_a.jpg %(epoch,iteration)
-ii) LABEL: val_epoch%ditr%d_b.jpg %(epoch,iteration)
-iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
+    i)  INPUT_IMAGE: val_epoch%ditr%d_a.jpg %(epoch,iteration)
+    ii) LABEL: val_epoch%ditr%d_b.jpg %(epoch,iteration)
+    iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
 ```
 
 ## Classification (Pretrained ResNet 50)
@@ -91,10 +94,12 @@ ISIC_0015284, 0
 
 
 ```
-usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY] [--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
+usage Train.py [--lr LEARNING_RATE] [--lr_de LEARNING_RATE_DECAY]
+[--checkpoint LOAD_PREV_CHECKPOINT] [-wd WEIGHT_DECAY] [-rd ROOT_DIR]
 
 1) Checkpoints are saved at every epoch as checkpoint_ep%d.pth.tar %(epoch)
-2) A list of loss and accuaracy values are saved as train_loss.pkl | val_loss.pkl and train_corrects.pkl | val_corrects.pkl
+2) A list of loss and accuaracy values are saved as train_loss.pkl | val_loss.pkl
+and train_corrects.pkl | val_corrects.pkl
 
 ```
 
