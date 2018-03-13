@@ -23,7 +23,7 @@ Say what the step will be
 2) Dermoscopic images can be super highresolution (7000x7000 or higher), resize images to get faster results. Resizing might require suitable adjustment to radius of structuring element and threshold value in my_function.
 ```
 
-## Deep Convolutional Generative Adversarial Network (DCGAN)
+## Image Generation (DCGAN)
 
 ###  Training:
 
@@ -42,7 +42,7 @@ usage mse_check.py: find closest match between fake images and real images.
 2)Generated images is saved as image%d_m.jpg %(idx).
 ```
 
-## Lesion segmentation
+## Lesion segmentation (Modified Unet)
 
 Model weights can be downloaded from:
 
@@ -72,7 +72,7 @@ ii) LABEL: val_epoch%ditr%d_b.jpg %(epoch,iteration)
 iii) OUTPUT_MAP: val_epoch%ditr%d_c.jpg %(epoch,iteration)
 ```
 
-## Classification
+## Classification (Pretrained ResNet 50)
 
 The weights for the Classification model are available on: https://drive.google.com/file/d/12XZrDWHODCpfCB6Vh9TQdFKHP51ORcKp/view?usp=sharing
 
