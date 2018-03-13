@@ -26,6 +26,13 @@ Say what the step will be
 ## Deep Convolutional Generative Adversarial Network (DCGAN)
 
 ###  Training:
+The data loader class (data_loader.py) take csv file as input. The CSV file is arranged as follows:
+Image_ID, Label
+ISIC_0015284, 0
+ISIC_0015284, 0
+.
+.
+.
 
 Fake images will be saved under images folder as fake_samples_ep%d_it%d.png  after every 10th batch of real data.  The model weights are saved as 'netG.pth' and 'netD.pth'.
 
