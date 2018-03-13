@@ -1,3 +1,6 @@
+# Model
+![dcgan](https://user-images.githubusercontent.com/16810812/37369882-dbda6106-26e0-11e8-9035-68038d829c75.png)
+
 # Results
 
 ## Iteration 1
