@@ -84,7 +84,8 @@ def model_run(model,phase,input_img,seg_map,opt,cri):
 	if phase == 'train':
 		loss.backward()
 		opt.step()
-	
+
+	output = torch.sigmoid(output)
 	output[output>=0.4]=1
 	output[output<0.4]=0
 	return (output,loss)
