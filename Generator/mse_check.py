@@ -57,7 +57,7 @@ for epochs in range(10):
 			if myloss < img_loss:
 				img_loss = myloss
 				save_match_image = actual_img
-				save_gen_image = out_img
+
 		vutils.save_image(save_match_image,'results/image%d_m_%f.jpg'%(50*epochs + idx,img_loss),normalize=True)
 		vutils.save_image(out_img.data,'results/image%d_m.jpg'%(50*epochs + idx),normalize=True)
 

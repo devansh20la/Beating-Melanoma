@@ -13,15 +13,15 @@ function output = remove_scale(image,image_seg,th)
     l_before = image(:,:,1);
 
     %% Perform closing
-    se = strel('sphere',5);
+    se = strel('sphere',3);
     image_close = imclose(image,se);
     l_after = image_close(:,:,1);
     new_l = l_after - l_before;
-    new_l = wthresh(new_l,'h',th);
-    new_l = imbinarize(new_l);
+%     new_l = wthresh(new_l,'h',th);
+%     new_l = imbinarize(new_l);
     
-%     %new_l(new_l > th) = 1;
-%     new_l(new_l <= th) = 0;
+    new_l(new_l > th) = 1;
+    new_l(new_l <= th) = 0;
 
     final_1 = new_l.*l_after;
     final_2 = l_before.*~new_l;

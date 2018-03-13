@@ -13,17 +13,8 @@ import shutil
 import argparse
 from model import network
 import pickle
-import itertools
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy import interp
-from itertools import cycle
-from sklearn import svm, datasets
-from sklearn.metrics import roc_curve, auc, confusion_matrix
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import label_binarize
-from sklearn.multiclass import OneVsRestClassifier
-from scipy import interpolate
+
 
 def save_checkpoint(state, is_best, filename,savetrainloss,savetraincorrects,savevalloss,savevalcorrects):
     torch.save(state, filename)
@@ -56,8 +47,10 @@ def model_run(phase,model,inputs,labels,criterion,optimizer):
 
     optimizer.zero_grad()
     outputs = model(inputs)
+
     if phase == 'train':
-        outputs = outputs[0]	
+        outputs = outputs[0]
+
     loss = criterion(outputs, labels)
     _, preds = torch.max(outputs.data, 1)
     
@@ -68,32 +61,6 @@ def model_run(phase,model,inputs,labels,criterion,optimizer):
     corrects = torch.sum(preds==labels.data)
     
     return loss.data[0],corrects,outputs
-
-def cal_auc_roc(submission):
-    y = label_binarize(submission[:,0],classes=[0,1,2])
-    n_classes = y.shape[1]
-    y_score = submission[:,1:]
-    y_pred = np.argmax(y_score,1)
-    fpr = dict()
-    tpr = dict()
-    roc_auc = dict()
-    
-    for i in range(n_classes):
-        fpr[i], tpr[i], _ = roc_curve(y[:, i], y_score[:, i])
-        roc_auc[i] = auc(fpr[i], tpr[i]) 
-    
-    fpr["micro"],tpr["micro"],_ = roc_curve(y.ravel(),y_score.ravel())
-    roc_auc["micro"] = auc(fpr["micro"],tpr["micro"])
-    all_fpr = np.unique(np.concatenate([fpr[i] for i in range(n_classes)]))
-    mean_tpr = np.zeros_like(all_fpr)
-    for i in range(n_classes):
-         mean_tpr += interp(all_fpr, fpr[i],tpr[i])
-    mean_tpr /= n_classes
-    fpr["macro"] = all_fpr
-    tpr["macro"] = mean_tpr
-    roc_auc["macro"] = auc(fpr["macro"], tpr["macro"])    
-    return roc_auc
-
 
 manualSeed = 200
 random.seed(manualSeed)
@@ -108,37 +75,32 @@ parser.add_argument('--lr','--learning_rate',type=float,default=0.001,help='init
 parser.add_argument('--lr_de','--lr_decay',type=int,default=30,help='learning rate decay epoch')
 parser.add_argument('--checkpoint',type=str,default='')
 parser.add_argument('--wd','--weightdecay',type=float,default=0)
+parser.add_argument('--rd','--root_dir',default='home/devansh/Documents/Melanoma/Classification/data')
+
 args = parser.parse_args()
 
 print("learning_rate: {0}, decay:{1}, checkpoint:{2}".format(args.lr,args.lr_de,args.checkpoint))
 
 data_transforms = {
     'train': transforms.Compose([
-        # transforms.Scale(400),
         RandomVerticleFlip(),
         transforms.RandomCrop(224),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
     'val': transforms.Compose([
-        # transforms.Scale(400),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-    ]),
-    'test': transforms.Compose([
-        # transforms.Scale(400),
-        transforms.CenterCrop(224),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])])
-}
+    ])}
 print ("....Initializing data sampler.....")
-data_dir = os.path.expanduser('~/Documents/Melanoma/Classification/data')
+
+data_dir = args.rd
 dsets = {x: imageandlabel(os.path.join(data_dir, x),'img_'+ x +'.csv', data_transforms[x])
-         for x in ['train', 'val','test']}
+         for x in ['train', 'val']}
 
 dset_loaders = {x: torch.utils.data.DataLoader(dsets[x], batch_size=25, num_workers=10, shuffle=True) 
-                for x in ['train', 'val','test']}
+                for x in ['train', 'val']}
 
 print ("....Loading Model.....")
 model_ft = network()
@@ -159,7 +121,6 @@ if args.checkpoint:
     optimizer.load_state_dict(state['optimizer'])
     start_epoch = state['epoch']
     best_loss = state['best_loss']
-    #best_acc = -float('inf')
     print("checkpoint Loaded star_epoch = {0},best_loss= {1}".format(start_epoch,best_loss))
     del state
     
@@ -211,29 +172,12 @@ for epoch in range(start_epoch,500):
 
     valloss = valloss/i
     valcorrects = valcorrects/i
-
-    testloss = 0.0
-    testcorrects = 0.0
-    submission = np.zeros((600,4),dtype=float)
-
-    for i,testdata in enumerate(dset_loaders['test'],0):
-        tsinput, tslabels = testdata['image'],testdata['label']
-        loss,correct,output = model_run('val',model_ft,tsinput,tslabels, criterion, optimizer)
-        testloss +=  loss
-        testcorrects += correct
-        submission[25*i:25*i+25,0] = tslabels.numpy()
-        submission[25*i:25*i+25,1:] = output.cpu().data.numpy()
-
-    auc_roc = cal_auc_roc(submission)
-        
-    testloss = testloss/(i+1)
-    testcorrects = testcorrects/(i+1)
    
     savevalloss[epoch] = valloss
     savevalcorrects[epoch] = valcorrects
  
-    if testloss < best_loss:
-        best_loss = testloss
+    if valloss < best_loss:
+        best_loss = valloss
         is_best = 1
     else:
         is_best = 0
@@ -243,4 +187,4 @@ for epoch in range(start_epoch,500):
     'optimizer': optimizer.state_dict(),
     'best_loss': best_loss},is_best,'checkpoint_ep%d.pth.tar'%(epoch),savetrainloss,savetraincorrects,savevalloss,savevalcorrects)
     
-    print ('Epoch = {0}, TrainingLoss = {1}, Train_corrects = {3},val Loss = {2}, val_corrects{4},testloss = {5},testcorrects = {6}, auc_roc = {7}'.format(epoch,trainloss,valloss,traincorrects,valcorrects,testloss,testcorrects,auc_roc["macro"]))
+    print ('Epoch = {0}, TrainingLoss = {1}, Train_corrects = {3},val Loss = {2}, val_corrects{4}'.format(epoch,trainloss,valloss,traincorrects,valcorrects))

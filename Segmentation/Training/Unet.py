@@ -103,14 +103,14 @@ parser.add_argument('--lr','--learning_rate',type=float,default=1e-4,help='initi
 parser.add_argument('--lr_de','--lr_decay',type=int,default=30,help='learning rate decay epoch')
 parser.add_argument('--checkpoint',type=str,default='')
 parser.add_argument('--wd','--weight_decay',type=int,default=0)
+parser.add_argument('--rd','--root_dir',default='/home/devansh/Documents/Melanoma/Segmentation/data/')
 args = parser.parse_args()
 
 # Creating data tranform model for both training and validation
 data_trans = {'train': transforms.Compose([transforms.ToTensor()]),
 		'val':transforms.Compose([transforms.ToTensor()])}
 
-root_dir = '/home/devansh/Documents/Melanoma/Segmentation/data/'
-
+root_dir = args.rd
 print (".....Setting up the data loader and sampler.....")
 
 # Setting the data loader and data queueing processes. 

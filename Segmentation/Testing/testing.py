@@ -82,6 +82,8 @@ for count,data in enumerate(data_loader,1):
 
 	out_map = model(input_image)
 	loss = criterion(out_map,seg_map)
+	
+	out_map = torch.sigmoid(out_map)
 	out_map[out_map>=0.4]=1
 	out_map[out_map<0.4]=0
 
