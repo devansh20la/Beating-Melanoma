@@ -5,6 +5,7 @@
 #results
 **/*.npy
 **/*.pkl
+**/*.csv
 
 #Data Images
 **/*.png
