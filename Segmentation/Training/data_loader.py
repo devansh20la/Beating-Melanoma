@@ -45,16 +45,16 @@ class seg_loader(Dataset):
         
         # data augmentation blocks 
         if random.random() < 0.5:
-            image.transpose(Image.FLIP_LEFT_RIGHT)
-            image_L.transpose(Image.FLIP_LEFT_RIGHT)
-            image_hsv.transpose(Image.FLIP_LEFT_RIGHT)
-            seg_image.transpose(Image.FLIP_LEFT_RIGHT)
+            image = image.transpose(Image.FLIP_LEFT_RIGHT)
+            image_L = image_L.transpose(Image.FLIP_LEFT_RIGHT)
+            image_hsv = image_hsv.transpose(Image.FLIP_LEFT_RIGHT)
+            seg_image = seg_image.transpose(Image.FLIP_LEFT_RIGHT)
 
         if random.random() < 0.5:
-            image.transpose(Image.FLIP_TOP_BOTTOM)
-            image_hsv.transpose(Image.FLIP_TOP_BOTTOM)
-            image_L.transpose(Image.FLIP_TOP_BOTTOM)
-            seg_image.transpose(Image.FLIP_TOP_BOTTOM)
+            image = image.transpose(Image.FLIP_TOP_BOTTOM)
+            image_hsv = image_hsv.transpose(Image.FLIP_TOP_BOTTOM)
+            image_L = image_L.transpose(Image.FLIP_TOP_BOTTOM)
+            seg_image = seg_image.transpose(Image.FLIP_TOP_BOTTOM)
 
         if self.trans:
             image = self.trans(image)
